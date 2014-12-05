@@ -12,13 +12,15 @@ npm install simple-random --save
 ##Usage
 ```javascript
 var sr = require('simple-random');
-var tempFilePrefix=sr(); //generates a 16 character alpha-numeric string.
+var tempFilePrefix=sr(); //generates a 16 character alpha-numeric string. example output: "pnxTcl2nOBqTNFQR"
 ```
-##Parameters
+##Options
 - `length`:  The length of the alpha-numeric string. (default 16)
 - `chars`: A string containing all the characters to draw from (defaults to all alpha-numeric characters).
- 
+- `prefix`: prefix.
+- `suffix`: suffix.
+
 ```javascript
 var sr = require('simple-random');
-var randomAbc= sr(10,'abc!'); //generates a 10 character string which will contain only 'abc!' characters.
+var randomAbc= sr({length:10,chars:'123-',prefix:"file_",suffix:".temp"}); //example output: "file_3333322-23.temp"
 ```
