@@ -1,0 +1,28 @@
+{
+  "name": "simple-random",
+  "version": "0.1.1",
+  "description": "A simple way to create random alpha numeric strings. Very useful for temporary files and folders.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dortzur/simple-random.git"
+  },
+  "keywords": [
+    "random",
+    "alpha-numeric",
+    "temporary",
+    "temp",
+    "tempfile",
+    "simple"
+  ],
+  "author": "Dor Tzur",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dortzur/simple-random/issues"
+  },
+  "homepage": "https://github.com/dortzur/simple-random"
+}
