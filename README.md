@@ -12,7 +12,7 @@ npm install simple-random --save
 ##Usage
 ```javascript
 var sr = require('simple-random');
-var tempFilePrefix=sr(); //generates a 16 chars alpha-numeric string.
+var tempFilePrefix=sr(); //generates a 16 character alpha-numeric string.
 ```
 ##Parameters
 - `length`:  The length of the alpha-numeric string. (default 16)
