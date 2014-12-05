@@ -16,7 +16,7 @@ var tempFilePrefix=sr(); //generates a 16 character alpha-numeric string.
 ```
 ##Parameters
 - `length`:  The length of the alpha-numeric string. (default 16)
-- `chars`: A string containing all the characters to draw from (default is all alpha-numeric characters.
+- `chars`: A string containing all the characters to draw from (defaults to all alpha-numeric characters).
  
 ```javascript
 var sr = require('simple-random');
