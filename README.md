@@ -12,7 +12,8 @@ npm install simple-random --save
 ##Usage
 ```javascript
 var sr = require('simple-random');
-var tempFilePrefix=sr(); //generates a 16 character alpha-numeric string. example output: "pnxTcl2nOBqTNFQR"
+var tempFilePrefix=sr(); //Generates a 16 character alpha-numeric string.
+Example output: "pnxTcl2nOBqTNFQR"
 ```
 ##Options
 - `length`:  The length of the alpha-numeric string. (default 16)
@@ -22,5 +23,5 @@ var tempFilePrefix=sr(); //generates a 16 character alpha-numeric string. exampl
 
 ```javascript
 var sr = require('simple-random');
-var randomAbc= sr({length:10,chars:'123-',prefix:"file_",suffix:".temp"}); //example output: "file_3333322-23.temp"
+var random123= sr({length:10,chars:'123-',prefix:"file_",suffix:".temp"}); // Example output: "file_3133322-23.temp"
 ```
