@@ -13,5 +13,13 @@ describe('options', function () {
         var random = simpleRandom({prefix: "_tmp_"});
         random.should.startsWith("_tmp");
     })
-
+    it('should end with .docx',function() {
+        var random = simpleRandom({suffix: ".docx"});
+        random.should.endsWith(".docx");
+    })
+    it('should contain only "1"',function() {
+        var random = simpleRandom({chars:'1'});
+        var ones = "1111111111111111";
+        random.should.be.equal(ones);
+    })
 });
