@@ -4,9 +4,9 @@
   "description": "A simple way to create random alpha numeric strings. Very useful for temporary files and folders.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha",
+    "posttest": "./node_modules/.bin/istanbul check-coverage && rm -rf coverage"
   },
-
   "repository": {
     "type": "git",
     "url": "git@github.com:dortzur/simple-random.git"
@@ -24,5 +24,15 @@
   "bugs": {
     "url": "https://github.com/dortzur/simple-random/issues"
   },
-  "homepage": "https://github.com/dortzur/simple-random"
+  "directories": {
+    "test": "test"
+  },
+  "homepage": "https://github.com/dortzur/simple-random",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "istanbul": "^0.3.5",
+    "mocha": "^2.0.1",
+    "sinon": "^1.12.1"
+  },
+  "dependencies": {}
 }
