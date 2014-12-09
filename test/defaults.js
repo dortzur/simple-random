@@ -1,6 +1,6 @@
-describe('random', function () {
+describe('defaults', function () {
     var should = require('chai').should();
-    const defaultChars='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const defaultChars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
     var simpleRandom = require("../index.js");
     it('should have length of 16', function () {
@@ -13,7 +13,6 @@ describe('random', function () {
         randomArray.forEach(function (char) {
             defaultChars.indexOf(char).should.be.above(-1);
         });
-
 
 
     });

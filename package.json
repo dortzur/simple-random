@@ -30,6 +30,7 @@
   "homepage": "https://github.com/dortzur/simple-random",
   "devDependencies": {
     "chai": "^1.10.0",
+    "chai-string": "^1.1.0",
     "istanbul": "^0.3.5",
     "mocha": "^2.0.1",
     "sinon": "^1.12.1"
