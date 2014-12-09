@@ -1,5 +1,5 @@
 # Simple Random
-[![Build Status](https://travis-ci.org/dortzur/simple-random.svg?branch=master)](https://travis-ci.org/dortzur/simple-random) [![npm](http://img.shields.io/npm/v/npm.svg)](https://www.npmjs.org/package/simple-random) [![npm version](https://badge.fury.io/js/simple-random.svg)](http://badge.fury.io/js/simple-random)
+[![Build Status](https://travis-ci.org/dortzur/simple-random.svg?branch=master)](https://travis-ci.org/dortzur/simple-random)  [![npm version](https://badge.fury.io/js/simple-random.svg)](http://badge.fury.io/js/simple-random)
 
 A simple library to create random alpha numeric strings.
 Very useful for creating for random names for files and folders, among other usages.
