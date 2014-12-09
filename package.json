@@ -1,6 +1,6 @@
 {
   "name": "simple-random",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A simple way to create random alpha numeric strings. Very useful for temporary files and folders.",
   "main": "index.js",
   "scripts": {
