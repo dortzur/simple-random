@@ -13,7 +13,5 @@ describe('defaults', function () {
         randomArray.forEach(function (char) {
             defaultChars.indexOf(char).should.be.above(-1);
         });
-
-
     });
 });
