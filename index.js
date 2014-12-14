@@ -1,12 +1,27 @@
 module.exports = function (options) {
 
-    function secureRandom(length, chars) {
+    function nodeSecureRandom(length, chars) {
         var crypto = require('crypto');
-        var result = "";
         var randomBytes = crypto.randomBytes(length);
+
+        return bytesToChars(randomBytes, chars);
+    }
+
+    function browserSecureRandom(length, chars) {
+        var isSupported = 'crypto' in window && !!window.crypto && 'getRandomValues' in window.crypto;
+        if (!isSupported) {
+            throw new Error("secure random is unsupported in this browser. " +
+            "You can change the \"secure\" option to false for pseudo-random values.");
+        }
+        var randomBytes = window.crypto.getRandomValues(new Uint8Array(length));
+        return bytesToChars(randomBytes, chars);
+    }
+
+    function bytesToChars(byteArray, chars) {
         var index;
-        for (var i = 0; i < length; i++) {
-            index = randomBytes[i] % chars.length;
+        var result = "";
+        for (var i = 0; i < byteArray.length; i++) {
+            index = byteArray[i] % chars.length;
             result += chars[index];
         }
         return result;
@@ -23,6 +38,8 @@ module.exports = function (options) {
     }
 
 
+    var isNode = typeof module !== 'undefined' && module.exports;
+
 
     //defaults
     options = options || {};
@@ -33,8 +50,14 @@ module.exports = function (options) {
     options.secure = options.secure || true;
 
     var result;
+
+
     if (options.secure) {
-        result = secureRandom(options.length, options.chars);
+        if (isNode) {
+            result = nodeSecureRandom(options.length, options.chars);
+        } else {
+            result = browserSecureRandom(options.length, options.chars);
+        }
     } else {
         result = mathRandom(options.length, options.chars);
     }
