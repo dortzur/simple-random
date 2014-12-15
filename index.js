@@ -7,15 +7,15 @@ module.exports = function (options) {
         return bytesToChars(randomBytes, chars);
     }
 
-    function browserSecureRandom(length, chars) {
-        var isSupported = 'crypto' in window && !!window.crypto && 'getRandomValues' in window.crypto;
-        if (!isSupported) {
-            throw new Error("secure random is unsupported in this browser. " +
-            "You can change the \"secure\" option to false for pseudo-random values.");
-        }
-        var randomBytes = window.crypto.getRandomValues(new Uint8Array(length));
-        return bytesToChars(randomBytes, chars);
-    }
+    //function browserSecureRandom(length, chars) {
+    //    var isSupported = 'crypto' in window && !!window.crypto && 'getRandomValues' in window.crypto;
+    //    if (!isSupported) {
+    //        throw new Error("secure random is unsupported in this browser. " +
+    //        "You can change the \"secure\" option to false for pseudo-random values.");
+    //    }
+    //    var randomBytes = window.crypto.getRandomValues(new Uint8Array(length));
+    //    return bytesToChars(randomBytes, chars);
+    //}
 
     function bytesToChars(byteArray, chars) {
         var index;
@@ -47,17 +47,17 @@ module.exports = function (options) {
     options.chars = options.chars || '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     options.prefix = options.prefix || "";
     options.suffix = options.suffix || "";
-    options.secure = options.secure || true;
+    if (typeof options.secure === "undefined") {
+        options.secure = true;
+    }
 
     var result;
-
-
     if (options.secure) {
-        if (isNode) {
-            result = nodeSecureRandom(options.length, options.chars);
-        } else {
-            result = browserSecureRandom(options.length, options.chars);
-        }
+        //if (isNode) {
+        result = nodeSecureRandom(options.length, options.chars);
+        //} else {
+        //    result = browserSecureRandom(options.length, options.chars);
+        //}
     } else {
         result = mathRandom(options.length, options.chars);
     }
