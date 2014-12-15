@@ -1,8 +1,7 @@
 # Simple Random
 [![Build Status](https://travis-ci.org/dortzur/simple-random.svg?branch=master)](https://travis-ci.org/dortzur/simple-random)  [![npm version](https://badge.fury.io/js/simple-random.svg)](http://badge.fury.io/js/simple-random) [![npm](http://img.shields.io/npm/dm/simple-random.svg)](https://www.npmjs.com/package/simple-random)
 
-A simple javascript library meant to help create secure random alpha-numeric strings.
-Very useful when creating random names for files, folders and secure random temporary passwords.
+A simple javascript library meant to help create secure random alpha-numeric strings. Very useful when creating random names for files, folders and secure random temporary passwords.
 
 Can also be configured to allow for none alpha-numeric characters.
 
