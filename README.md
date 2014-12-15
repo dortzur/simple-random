@@ -21,7 +21,7 @@ var tempFilePrefix=sr(); // Generates a 16 character alpha-numeric string.
 - `chars`: A string containing all the characters to draw from (defaults to all alpha-numeric characters).
 - `prefix`: Prefix.
 - `suffix`: Suffix.
-- `secure`: Whether or not to use the `crypto` library for secure random bytes seed as opposed to `Math.random()` (default true).
+- `secure`: Whether or not to use the `crypto` library for secure random byte seed as opposed to `Math.random()` (default true).
 ```javascript
 var sr = require('simple-random');
 var random123= sr({length:10,chars:'123-',prefix:"file_",suffix:".temp"});
