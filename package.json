@@ -1,12 +1,11 @@
 {
   "name": "simple-random",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple flexible javascript library that creates random alpha-numeric strings. Works in both NodeJS and the browser.",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha",
-    "posttest": "./node_modules/.bin/istanbul check-coverage && rm -rf coverage",
-    "postinstall": "./node_modules/.bin/browserify browser.js -o dist/simple_random.js -s simpleRandom"
+    "posttest": "./node_modules/.bin/istanbul check-coverage && rm -rf coverage"
   },
   "repository": {
     "type": "git",
