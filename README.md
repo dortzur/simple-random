@@ -36,7 +36,7 @@ var randomString = window.simpleRandom();
 //Secure Random
 var secureRandom;
 if (simpleRandom.isSecureSupported){
-secureRandom = simpleRandom({secure:true})
+  secureRandom = simpleRandom({secure:true})
 }
 
 </script>
