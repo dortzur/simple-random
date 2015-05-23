@@ -44,9 +44,9 @@ function initOptions(options) {
     options.chars = options.chars || "";
     options.prefix = options.prefix || "";
     options.suffix = options.suffix || "";
-    options.digits = options.digits || true;
-    options.letters = options.letters || true;
-    options.caseSensitive = options.caseSensitive || true;
+    options.digits = typeof options.digits === "undefined" ? true : options.digits;
+    options.letters = typeof options.letters === "undefined" ? true : options.letters;
+    options.caseSensitive = typeof options.caseSensitive === "undefined" ? true : options.caseSensitive;
 
     if (!options.chars) {
         if (options.digits) {
@@ -54,10 +54,12 @@ function initOptions(options) {
         }
         if (options.letters) {
             options.chars += _letters;
+
+            if (options.caseSensitive) {
+                options.chars += _letters.toUpperCase();
+            }
         }
-        if (options.caseSensitive) {
-            options.chars += _letters.toUpperCase();
-        }
+
     }
 
     if (typeof options.secure === "undefined") {
