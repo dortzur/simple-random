@@ -8,7 +8,7 @@ Works in both NodeJS and the browser.
 ###Secure Random 
 if the `secure` option is set to `true`, we can create a random byte seed with a cryptography library as opposed to Math.random().
 In Node we use the default `crypto` library.
-In webpack/browser versions we use the Web Cryptography API if supported.
+In webpack / browser versions we use the Web Cryptography API if supported.
 
 ##Installation
 ```bash
@@ -45,9 +45,12 @@ if (simpleRandom.isSecureSupported){
 
 
 ##Options
-- `length`:  The length of the alpha-numeric string. (default 16)
-- `chars`: A string containing all the characters to draw from (defaults to all alpha-numeric characters).
+- `length`: The length of the alpha-numeric string (default 16).
+- `digits`: should allow digits in random string (default true).
+- `letters`: should allow letters in random string (default true).
+- `caseSensitive`: if set to false, only lowercase letter characters will be used (default true).
 - `prefix`: Prefix.
 - `suffix`: Suffix.
 - `secure`: Whether or not to use the `crypto` library for secure random byte seed as opposed to `Math.random()` (default false).
+- `chars`: A string containing all the characters to draw from, defaults to all alpha-numeric characters (overrides digits, letters and caseSensitive flags).
 
