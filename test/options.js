@@ -22,8 +22,8 @@ describe('options', function () {
         var ones = "1111111111111111";
         random.should.be.equal(ones);
     });
-    it('should provide expected outcome with insecure random', function () {
-        var options = {chars: "1234567890a", length: 40, secure: false};
+    it('should provide expected outcome with secure random', function () {
+        var options = {chars: "1234567890a", length: 40, secure: true};
         var random = simpleRandom(options);
         random.should.have.lengthOf(options.length);
         var randomArray = random.split("");
