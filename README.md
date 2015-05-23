@@ -49,8 +49,8 @@ if (simpleRandom.isSecureSupported){
 - `digits`: should allow digits in random string (default true).
 - `letters`: should allow letters in random string (default true).
 - `caseSensitive`: if set to false, only lowercase letter characters will be used (default true).
+- `secure`: Whether or not to use the `crypto` library for secure random byte seed as opposed to `Math.random()` (default false).
 - `prefix`: Prefix.
 - `suffix`: Suffix.
-- `secure`: Whether or not to use the `crypto` library for secure random byte seed as opposed to `Math.random()` (default false).
 - `chars`: A string containing all the characters to draw from, defaults to all alpha-numeric characters (overrides digits, letters and caseSensitive flags).
 
