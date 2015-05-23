@@ -30,7 +30,7 @@ var randomString = sr(); // Generates a 16 character alpha-numeric string.
 ###Browser
 ```html
 <script src="simple-random/dist/simple_random.js"></script>
-<scripts>
+<script>
 var randomString = window.simpleRandom();
 
 //Secure Random
