@@ -1,7 +1,7 @@
 {
   "name": "simple-random",
-  "version": "1.0.0",
-  "description": "A simple javascript library meant to help create secure random alpha-numeric strings.Very useful when creating random names for files,folders and secure random temporary passwords.",
+  "version": "1.0.1",
+  "description": "A simple flexible javascript library that creates random alpha-numeric strings. Works in both NodeJS and the browser.",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha",
