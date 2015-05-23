@@ -46,7 +46,7 @@ function initOptions(options) {
     options.suffix = options.suffix || "";
     options.digits = options.digits || true;
     options.letters = options.letters || true;
-    options.lettersCaseSensitive = options.lettersCaseSensitive || true;
+    options.caseSensitive = options.caseSensitive || true;
 
     if (!options.chars) {
         if (options.digits) {
@@ -55,7 +55,7 @@ function initOptions(options) {
         if (options.letters) {
             options.chars += _letters;
         }
-        if (options.lettersCaseSensitive) {
+        if (options.caseSensitive) {
             options.chars += _letters.toUpperCase();
         }
     }
@@ -90,8 +90,8 @@ module.exports = {create: createSimpleRandom};
 },{}],3:[function(require,module,exports){
 var secureContainer = require('./lib/browser_secure');
 
-var randomFactory = require("./lib/simpleRandom");
+var randomFactory = require("./lib/simple_random");
 module.exports = randomFactory.create(secureContainer);
 module.exports.isSecureSupported = secureContainer.isSupported;
-},{"./lib/browser_secure":1,"./lib/simpleRandom":2}]},{},[3])(3)
+},{"./lib/browser_secure":1,"./lib/simple_random":2}]},{},[3])(3)
 });
