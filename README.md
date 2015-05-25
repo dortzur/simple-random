@@ -23,7 +23,7 @@ var randomString = sr(); // Generates a 16 character alpha-numeric string.
 ```
 ###WebPack
 ```javascript
-var sr=require('simple-random/browser'); 
+var sr = require('simple-random/browser'); 
 var randomString = sr(); // Generates a 16 character alpha-numeric string.
 // Example output: "pnxTcl2nOBqTNFQR"
 ```
